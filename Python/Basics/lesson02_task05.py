@@ -1,6 +1,12 @@
-my_list = [7, 5, 3, 3, 2, 1, 9]
+my_list = [7, 5, 3, 3, 2, 1]
 num_input = int(input('Введите число: '))
-my_list.append(num_input)
-my_list.sort(reverse=True)
+i = 0
+
+for num in my_list:
+    if num_input <= num:
+        i += 1
+    elif num_input > num:
+        break
+
+my_list.insert(i, num_input)
 print(my_list)
-print(type(my_list))
